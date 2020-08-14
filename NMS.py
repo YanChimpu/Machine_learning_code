@@ -27,7 +27,7 @@ def single_nms(bboxes, scores, threshold=0.5):
             h = np.maximum(0.0, yy2 - yy1 + 1)
             inner_area = w * h
             IOU = inner_area / (areas[i] + areas[order[1:]] - inner_area)
-            inds = np.where(iou < threshold)[0]
+            inds = np.where(IOU < threshold)[0]
             if inds.size == 0:
                 break
             order = order[inds+1]
