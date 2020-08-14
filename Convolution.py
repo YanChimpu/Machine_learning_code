@@ -10,7 +10,7 @@ class Conv_sliding_window(object):
         self.padding = padding
 
     def conv2d(self, c_out):
-        """:arg
+        """
         self.input: c * h * w
         self.weights: c * h * w
         """

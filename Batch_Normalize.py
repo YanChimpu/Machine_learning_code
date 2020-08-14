@@ -21,8 +21,8 @@ def batch_norm(is_training, X, gamma, beta, moving_mean, moving_var, eps, moment
         x_hat = (X - mean) / torch.sqrt(var + eps)
         moving_mean = momentum * moving_mean + (1 - momentum) * mean
         moving_var = momentum * moving_var + (1 - momentum) * var
-        Y = gamma * x_hat + beta
-        return Y, moving_mean, moving_var
+    Y = gamma * x_hat + beta
+    return Y, moving_mean, moving_var
 
 
 class BatchNorm(nn.modules):
